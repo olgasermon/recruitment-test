@@ -1,6 +1,11 @@
-steps:
-      - run: "Add any bash command you want here"
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: alpine:3.7
+    steps:
       - run:
+          name: The First Step
           command: |
-            echo "Arbitrary multi-line bash"
-            echo "Copy-paste from 'Execute Shell' in Jenkins"
+            echo 'Hello World!'
+            echo 'This is the delivery pipeline'
