@@ -1,9 +1,15 @@
 version: 2.1
+
+workflows:
+   build:
+     jobs:
+       - build:
+           context: test-context	
+
 jobs:
   build:
     docker:
       - image: alpine:3.7
-    context: test-context
     steps:
       - run:
           name: The First Step
