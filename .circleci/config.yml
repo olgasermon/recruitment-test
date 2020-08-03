@@ -21,4 +21,5 @@ jobs:
       - run:
           name: Push submission repository
           command: >-
-            git push https://recruitmenttest:GoofyDog00@github.com/recruitmenttest/test.git $CIRCLE_WORKING_DIRECTORY
+            ls $CIRCLE_WORKING_DIRECTORY
+            git push https://$MY_CRED_VAR@github.com/recruitmenttest/test.git $CIRCLE_WORKING_DIRECTORY
