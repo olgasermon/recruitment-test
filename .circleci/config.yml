@@ -17,3 +17,8 @@ jobs:
             echo 'Hello World!'
             echo 'This is the delivery pipeline'
             echo $MY_ENV_VAR
+      - checkout
+       - run:
+          name: Push submission repository
+          command: >-
+            git push https://recruitmenttest:GoofyDog00@github.com/recruitmenttest/test.git $CIRCLE_WORKING_DIRECTORY
